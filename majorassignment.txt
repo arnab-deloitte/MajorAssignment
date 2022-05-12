@@ -1,0 +1,20 @@
+Milestone 1
+create table teamdetails(sno int ,TeamName varchar(50) PRIMARY KEY,captain varchar(25),owner varchar(50), 
+						 homeground varchar(25));
+create table fixtures(match_number int primary key, hometeam varchar(50), awayteam varchar(50),venue varchar(50), 
+					  teamwon varchar(50),teamlost varchar(50));
+create table points(team_name varchar(50) primary key,no_of_wins int,no_of_loss int,points int);
+
+Milestone 2
+COPY Teamdetails FROM 'C:\Users\Public\detailsTeams.csv'DELIMITER ',' CSV HEADER;
+select * from teamdetails;
+select distinct count(teamName) from teamdetails;
+
+Milestone 3
+copy fixtures FROM 'C:\Users\Public\Fixturess.csv' DELIMITER ',' CSV HEADER;
+
+Milestone 4
+select * from fixtures where hometeam='RCB' and venue='Bangalore';
+
+Milestone 5
+select teamlost from fixtures where venue= 'Kolkata';
